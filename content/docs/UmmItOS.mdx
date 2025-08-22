@@ -1,0 +1,115 @@
+---
+title: UmmItOS
+description: UmmItOS is a beautiful arch linux distro.
+---
+
+## UmmItOS Overview
+
+UmmItOS is a GNU/Linux distribution based on Arch Linux and Hyprland DWM, featuring a personal configuration setup and dotfiles collection.
+
+### Current Status
+
+- **Development Stage**: Heavy development
+- **Available**: Configuration files and installation script
+- **Planned**: ISO release in the coming weeks
+
+### Repository
+
+View the source code and latest updates: [GitHub repository](https://github.com/UmmItKin/UmmItOS)
+
+## Installation
+
+This guide covers the complete setup process for UmmItOS dotfiles and configurations.
+
+### Prerequisites
+
+- Target audience: Newcomers to Hyprland and heavy user of Arch Linux
+- System: Arch Linux or Arch-based distribution (EndeavourOS also nice)
+- Required: `git` and `paru` (will be installed automatically if missing with the setup script)
+
+### About This Documentation
+
+This documentation provides detailed explanations and guidelines for understanding and using the UmmItOS dotfiles. It serves as the primary reference and is updated more frequently than the repository README.
+
+### Quick Installation
+
+Use the automated installation script:
+
+```shell
+bash <(curl -s https://raw.githubusercontent.com/UmmItC/Dotfiles/main/setup.sh)
+```
+
+The setup script automatically checks for `git` and `paru` dependencies and installs them if needed, then clones the dotfiles repository and copies configurations to your system.
+
+### Manual Installation
+
+Alternatively, clone the repository and run the installation script manually:
+
+```shell
+git clone --recurse-submodules https://github.com/UmmItC/Dotfiles.git
+cd Dotfiles
+./install.sh
+```
+
+> **Note**: Cloning with submodules includes the wallpaper repository for default wallpapers.
+
+### Installation Process
+
+The installation script performs the following steps:
+
+1. **Required Packages**: Installs necessary packages for the dotfiles
+2. **GPU Detection**: Automatically detects and installs AMD GPU packages if applicable  
+3. **Laptop Detection**: Installs laptop-specific packages when running on laptop hardware
+4. **Configuration Copy**: Copies all configurations to `~/.config`
+
+Each step can be skipped individually for modular installation.
+
+> **Note**: Package installation uses `paru` as the package manager.
+
+## Configuration
+
+### Terminal Startup
+
+To display Fastfetch when starting the terminal, add the following line to your shell configuration file (`.zshrc` or `.bashrc`):
+
+```shell
+fastfetch --show-errors --pipe false
+```
+
+### Hyprland Keybindings
+
+Modify keybindings in `~/.config/hypr/hyprland/keybinds.conf` to suit your preferences.
+
+## Post-Installation Setup
+
+After installation, several configurations require customization to match your system setup.
+
+### Hyprlock
+
+Configuration file: `~/.config/hypr/hyprlock.conf`
+
+**Required changes:**
+- Set the `monitor` variable to your monitor name
+- Find your monitor name: `hyprctl monitors`
+
+### Waybar
+
+Configuration file: `~/.config/waybar/config`
+
+**Required changes:**
+- Set the `interface` variable to your network interface name
+- Find your network interface: `ip a`
+
+### Hyprshot
+
+Configuration file: `~/.config/hypr/hyprland/env.conf`
+
+**Required changes:**
+- Set `HYPRSHOT_DIR` variable to your desired screenshot directory
+- Proper configuration is required for screenshot functionality
+
+### Wallpaper Management
+
+**Setup:**
+1. Place wallpaper files in `~/.wallpaper` directory
+2. Press `ALT + W` to select wallpaper
