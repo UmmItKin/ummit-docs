@@ -1,0 +1,10 @@
+{
+  "title": "Configuration",
+  "defaultOpen": true,
+  "pages": [
+    "index",
+    "fastfetch",
+    "hyprshot",
+    "keybindings"
+  ]
+}

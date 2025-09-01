@@ -1,0 +1,51 @@
+---
+title: Configuration Overview
+description: Configure terminal, keybindings and basic settings
+---
+
+# Configuration Overview
+
+Learn how to configure the basic settings for your UmmItOS installation.
+
+UmmItOS comes with pre-configured applications that you can customize to fit your preferences. This section covers the main configuration areas:
+
+import { Cards, Card } from 'fumadocs-ui/components/card';
+import { Terminal, Camera, BarChart3, Keyboard } from 'lucide-react';
+
+<Cards>
+  <Card 
+    icon={<Terminal />} 
+    href="/docs/ummitos/configuration/fastfetch" 
+    title="Fastfetch"
+  >
+    Configure system information display in terminal
+  </Card>
+  <Card 
+    icon={<Camera />} 
+    href="/docs/ummitos/configuration/hyprshot" 
+    title="Hyprshot"
+  >
+    Set up screenshot functionality and directories
+  </Card>
+  <Card 
+    icon={<BarChart3 />} 
+    href="/docs/ummitos/configuration/waybar" 
+    title="Waybar"
+  >
+    Customize status bar and system monitoring
+  </Card>
+  <Card 
+    icon={<Keyboard />} 
+    href="/docs/ummitos/configuration/keybindings" 
+    title="Keybindings"
+  >
+    Modify window manager keybindings
+  </Card>
+</Cards>
+
+## Configuration files location
+
+All UmmItOS configuration files are located in:
+- **Main config**: `~/.config/` (for all the configurations)
+- **Script**: `~/script/` (for all the scripts)
+- **Wallpaper**: `~/.wallpaper/` (for all the wallpapers)

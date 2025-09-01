@@ -1,0 +1,57 @@
+---
+title: Keybindings Setup
+description: Complete guide to UmmItOS keybindings and shortcuts
+---
+
+# Keybindings Setup
+
+UmmItOS comes with a comprehensive set of keybindings organized into different categories for optimal workflow efficiency.
+
+## Keybinding Categories
+
+Choose a category below to explore specific keybindings in detail.
+
+import { Cards, Card } from 'fumadocs-ui/components/card';
+import { Keyboard, Laptop, Package, Settings } from 'lucide-react';
+
+<Cards>
+  <Card 
+    icon={<Settings />} 
+    href="/docs/ummitos/configuration/keybindings/hyprland-builtin" 
+    title="Hyprland Built-in"
+  >
+    Hyprland built-in features keybindings
+  </Card>
+  <Card 
+    icon={<Laptop />} 
+    href="/docs/ummitos/configuration/keybindings/laptop" 
+    title="Laptop Controls"
+  >
+    Mainly for laptop users, but you also can check it out :)
+  </Card>
+  <Card 
+    icon={<Package />} 
+    href="/docs/ummitos/configuration/keybindings/common-software" 
+    title="Common Software"
+  >
+    Application launchers and third-party tools keybindings
+  </Card>
+</Cards>
+
+## Quick reference
+
+### Main modifier key
+
+- **$mainMod = SUPER** (Windows key)
+
+## Configuration files
+
+All keybindings are configured in the following files:
+- **Launcher Config**: `./configs/hypr/hyprland/launcher.conf`
+- **Keybinds Config**: `./configs/hypr/hyprland/hypr_keybinds.conf`
+- **Laptop Config**: `./configs/hypr/hyprland/laptop.conf`
+- **Location**: `~/.config/hypr/hyprland/` (after installation)
+
+## Applying the changes
+
+Hyprland come with auto reload feature. so you don't need to reload the configuration manually, the result will be shown immediately.

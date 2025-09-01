@@ -1,0 +1,14 @@
+{
+  "title": "UmmItOS Documentation",
+  "description": "Complete guide to UmmItOS setup and configuration",
+  "icon": "Building",
+  "root": true,
+  "defaultOpen": false,
+  "pages": [
+    "---Overview---",
+    "index",
+    "---Side Projects---",
+    "ummitos-main",
+    "make-flag"
+  ]
+}

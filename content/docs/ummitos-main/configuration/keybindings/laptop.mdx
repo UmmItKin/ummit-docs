@@ -1,0 +1,83 @@
+---
+title: Laptop Keybindings
+description: Brightness, volume, and media control keys for laptop users
+---
+
+# Laptop Keybindings
+
+These keybindings are specifically designed for laptop users and provide control over hardware features like brightness, volume, and media playback.
+
+Usually these keys only available on laptop users. but you also can check it out! to use is just press the key you can see on the laptop keybaord, a little icon you can see on the key.
+
+These keybindings are configured in the laptop section of the configuration file:
+
+**Location**: `./configs/hypr/hyprland/laptop.conf`
+
+## Brightness Control
+
+| Keybinding | Action | Description |
+|------------|---------|-------------|
+| `Brightness Up` | Increase Brightness | Increase screen brightness by 1% |
+| `Brightness Down` | Decrease Brightness | Decrease screen brightness by 1% |
+
+## Volume Control
+
+| Keybinding | Action | Description |
+|------------|---------|-------------|
+| `Volume Up` | Increase Volume | Increase audio volume by 1% |
+| `Volume Down` | Decrease Volume | Decrease audio volume by 1% |
+| `Mute` | Toggle Mute | Mute/unmute audio output |
+
+## Media Control
+
+| Keybinding | Action | Description |
+|------------|---------|-------------|
+| `Play/Pause` | Toggle Playback | Play or pause current media |
+| `Previous Track` | Previous | Skip to previous track |
+| `Next Track` | Next | Skip to next track |
+
+## Special Functions
+
+This are my custom keybindings for using Ollama instead of Copilot key. 
+
+| Keybinding | Action | Description |
+|------------|---------|-------------|
+| `Alt Right + Copilot` | Launch Ollama | Start Ollama with Llama3.1 model in terminal |
+
+<Callout type="warning">
+**Copilot Key**: This refers to the dedicated Copilot key found on some newer laptops. If your laptop doesn't have this key, you can modify the configuration to use a different key combination or just remote this keybindings.
+</Callout>
+
+## Required Packages
+
+For these keybindings to work properly, ensure these packages are installed:
+
+| Package | Purpose | Install Command |
+|---------|---------|----------------|
+| `brightnessctl` | Brightness control | `paru -S brightnessctl` |
+| `playerctl` | Media control | `paru -S playerctl` |
+
+## Customization
+
+To modify laptop-specific keybindings:
+
+1. **Edit the configuration file**
+2. **Adjust the increment values** (e.g., change `1%` to `5%` for faster changes)
+3. **Add custom laptop-specific shortcuts**
+4. **Test the changes** after reloading configuration
+
+### Example Custom Configuration
+
+```shell
+# Custom brightness control (5% increments)
+bind = , XF86MonBrightnessUp, exec, brightnessctl set +5%
+bind = , XF86MonBrightnessDown, exec, brightnessctl set 5%-
+
+# Custom volume control (2% increments)
+bindel = , XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+bindel = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+```
+
+<Callout type="success">
+**Auto-Installation**: The UmmItOS installation script automatically installs will detect your machine dose this are laptop or not. if it is laptop, it will install the required packages.
+</Callout>

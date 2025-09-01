@@ -1,0 +1,11 @@
+{
+  "title": "UmmItOS",
+  "defaultOpen": false,
+  "pages": [
+    "index",
+    "Prerequisites", 
+    "Installation",
+    "Post-install",
+    "configuration"
+  ]
+}
