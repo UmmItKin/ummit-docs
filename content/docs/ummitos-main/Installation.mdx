@@ -34,12 +34,12 @@ The installation script performs the following steps, **each step is optional an
 
 <Callout type="info">Package installation uses `paru` as the package manager.</Callout>
 
-## Manual Installation
+## Manual Installation (CLI)
 
 Manual Installation allows you to install UmmItOS manually by cloning the repository and running the installation script yourself.
 
 ```shell
-git clone --recurse-submodules https://github.com/UmmItKin/Dotfiles.git
+git clone --depth 1 --shallow-submodules --recursive https://github.com/UmmItKin/Dotfiles.git
 cd Dotfiles
 ./install.sh
 ```
@@ -47,3 +47,13 @@ cd Dotfiles
 <Callout type="info">Cloning with submodules includes the wallpaper repository for default wallpapers.</Callout>
 
 The `[y/n]` prompt will ask you to confirm the installation. You can press `y` to confirm the installation or `n` to skip it and follow the steps manually.
+
+## Experimental TUI Installation (Not finish.)
+
+You can try our new Terminal User Interface for a more interactive experience:
+
+```bash
+./install-menu.sh
+```
+
+<Callout type="warning">The TUI installation is currently in experimental phase. Copying file still be under development.</Callout>
