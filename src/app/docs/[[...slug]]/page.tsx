@@ -35,7 +35,7 @@ export default async function Page(props: {
       <DocsBody>
         <div className="flex items-center justify-between mt-12 pt-6 border-t border-fd-border/60">
           <p className="text-xs text-fd-muted-foreground">
-            Found an issue? some submit a pull request! <br />Don&apos;t be shy, your help is making this documentation better for everyone.
+            Found an issue? submit a pull request! <br />Don&apos;t be shy, your help is making this documentation better for everyone.
           </p>
           <a
             href={`https://github.com/UmmItKin/ummit-docs/blob/master/content/docs/${page.file.path}`}
